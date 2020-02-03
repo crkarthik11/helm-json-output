@@ -71,7 +71,8 @@ function ExtractResources(helmRawOutput) {
     return '';
   }
 
-  const matches = helmRawOutput.match(/(.*RESOURCES:\s+)((.|\n)*)(\s*NOTES:.*)/);
+//   const matches = helmRawOutput.match(/(.*RESOURCES:\s+)((.|\n)*)(\s*NOTES:.*)/);
+  const matches = helmRawOutput.match(/(\s*NOTES:.*)/);
 
   if (!matches || matches.length < 3) {
     return '';
